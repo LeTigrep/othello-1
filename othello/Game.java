@@ -31,75 +31,8 @@ public class Game
 	
 
 
-    public boolean legalMove(int r, int c, int color, boolean retourner) 
-	{
-		
-		boolean legal = false;
-		
-	
-		if (board[r][c] == 0)
-		{
-	
-			int posX;
-			int posY;
-			boolean found;
-			int current;
-			
-
-			for (int x = -1; x <= 1; x++)
-			{
-				for (int y = -1; y <= 1; y++)
-				{
-				
-					posX = c + x;
-					posY = r + y;
-					found = false;
-					current = board[posY][posX];
-					
-				
-					if (current == -1 || current == 0 || current == color)
-					{
-						continue;
-					}
-					
-				
-					while (!found)
-					{
-						posX += x;
-						posY += y;
-						current = board[posY][posX];
-						
-					
-						if (current == color)
-						{
-							found = true;
-							legal = true;
-						
-							if (retourner)
-							{
-								posX -= x;
-								posY -= y;
-								current = board[posY][posX];
-								
-								while(current != 0)
-								{
-									board[posY][posX] = color;
-									posX -= x;
-									posY -= y;
-									current = board[posY][posX];
-								}
-							}
-						}
-						else if (current == -1 || current == 0)
-						{
-							found = true;
-						}
-					}
-				}
-			}
-		}
-
-        return legal;
+    public boolean legalMove(int r, int c) 
+    {
     }
 
 
