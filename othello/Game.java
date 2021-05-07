@@ -31,7 +31,7 @@ public class Game
 	
 
 
-    public boolean legalMove(int r, int c, int color, boolean flip) 
+    public boolean legalMove(int r, int c, int color, boolean retourner) 
 	{
 		
 		boolean legal = false;
@@ -75,7 +75,7 @@ public class Game
 							found = true;
 							legal = true;
 						
-							if (flip)
+							if (retourner)
 							{
 								posX -= x;
 								posY -= y;
