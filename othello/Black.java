@@ -1,6 +1,6 @@
 
 
-public class Black {
+public class noir {
 
  
     public Game strategie(Game game, boolean done, int color) {
