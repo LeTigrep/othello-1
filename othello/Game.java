@@ -7,7 +7,7 @@ public class Game
     final static int EMPTY = 0;
     final static int WIDTH = 10;
     final static int HEIGHT = 10;
-    final int board[][] = new int[WIDTH][HEIGHT];
+    final int bord[][] = new int[WIDTH][HEIGHT];
 	
 
 	
@@ -24,25 +24,25 @@ public class Game
 		{
 			for (int j = 0; j < WIDTH; j++)
 			{
-				this.board[i][j] = another.board[i][j];
+				this.bord[i][j] = another.bord[i][j];
 			}
 		}
 	}
 	
 
 
-    public boolean legalMove(int r, int c) 
+    public boolean legal(int r, int c) 
     {
     }
 
 
-	public void printBoard()
+	public void printBord()
 	{
 		for (int i = 1; i <= HEIGHT - 2; i++)
 		{
 			for (int j = 1; j <= WIDTH - 2; j++)
 			{
-				System.out.print("[" + board[i][j] + "]");
+				System.out.print("[" + bord[i][j] + "]");
 			}
 			System.out.println();
 		}
