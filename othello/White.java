@@ -1,9 +1,9 @@
 
-public class White 
+public class blanc 
 {
 	
 
-	public White()
+	public blanc()
 	{
 		
 	}
@@ -11,25 +11,25 @@ public class White
 	
 	
   
-    public Game strategy(Game game, boolean done, int color) {
+    public Game strategie(Game game, boolean done, int color) {
         
-        return randStrategy(game,done,color);
+        return randStrategie(game,done,color);
     }
 
 
 	
-    public Game randStrategy(Game game, boolean done, int color) {
+    public Game randStrategie(Game game, boolean done, int color) {
 
         int ligne = (int)(Math.random()*(game.HEIGHT-2)) + 1;
         int colone = (int)(Math.random()*(game.WIDTH-2)) + 1;
         
-        while (!done && !game.legalMove(ligne,colone,color,true)) {
+        while (!done && !game.legalPas(ligne,colone,color,true)) {
             ligne = (int)(Math.random()*(game.HEIGHT-2)) + 1;
             colone = (int)(Math.random()*(game.WIDTH-2)) + 1;
         }
         
         if (!done) 
-            game.board[ligne][] = color;
+            game.bord[ligne][] = color;
 
         return game;
     }
