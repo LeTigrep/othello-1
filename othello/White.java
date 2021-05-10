@@ -23,7 +23,7 @@ public class blanc
         int ligne = (int)(Math.random()*(game.HEIGHT-2)) + 1;
         int colone = (int)(Math.random()*(game.WIDTH-2)) + 1;
         
-        while (!done && !game.legalPas(ligne,colone,color,true)) {
+        while (!done && !game.legal(ligne,colone,color,true)) {
             ligne = (int)(Math.random()*(game.HEIGHT-2)) + 1;
             colone = (int)(Math.random()*(game.WIDTH-2)) + 1;
         }
